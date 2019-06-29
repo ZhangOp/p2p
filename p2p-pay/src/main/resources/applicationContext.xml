@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 导入 spring mvc 配置 -->
+    <import resource="applicationContext-mvc.xml"/>
+
+    <!--加载系统配置文件-->
+    <context:property-placeholder location="classpath:pay-config.properties"/>
+
+    <!--<bean class="com.bjpowernode.pay.config.PayConfig">
+        <property name="charset" value="${charset}"/>
+        <property name="alipayGatewayUrl" value="${alipayGatewayUrl}"/>
+        <property name="alipayPublickey" value="${alipayPublickey}"/>
+        <property name="appId" value="${appId}"/>
+        <property name="merchantPrivateKey" value="${merchantPrivateKey}"/>
+        <property name="signType" value="${signType}"/>
+        <property name="format" value="${format}"/>
+        <property name="alipayNotifyUrl" value="${alipayNotifyUrl}"/>
+        <property name="alipayReturnUrl" value="${alipayReturnUrl}"/>
+    </bean>-->
+
+</beans>
